@@ -22,4 +22,5 @@
     <string name="result">0.00</string>
     <string name="user_name">Pawel Wojdera</string>
     <string name="user_mail">paulwojdera@gmail.com</string>
+    <string name="valid_number">Please enter valid number</string>
 </resources>

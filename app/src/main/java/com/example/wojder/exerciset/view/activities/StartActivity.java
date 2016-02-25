@@ -118,8 +118,8 @@ public class StartActivity extends AppCompatActivity
     private void switchFragment(int fragmentId) {
         String title = "";
 
-        if (currentFragment == fragmentId)
-            return;
+//        if (currentFragment == fragmentId)
+//            return;
 
         currentFragment = fragmentId;
 
@@ -127,6 +127,10 @@ public class StartActivity extends AppCompatActivity
             case R.id.calculapptor:
                 title = (String) this.getResources().getText(R.string.calculapptor);
                 selectedFragment = ContentFragment.calculator.getFragment();
+                break;
+            case R.id.notificapp:
+                title = (String) this.getResources().getText(R.string.notificapp);
+                selectedFragment = ContentFragment.downloader.getFragment();
                 break;
             default:
                 break;
