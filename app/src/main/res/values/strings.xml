@@ -4,13 +4,10 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="downloapptor">DownloApptor</string>
     <string name="notificapp">NotificApp</string>
     <string name="calculapptor">CalculApptor</string>
     <string name="enter_numbers">Enter two numbers</string>
-    <string name="hello_blank_fragment_calc">Hello blank CALC fragment</string>
-    <string name="hello_blank_fragment_notify">Hello blank NOTIFICATION fragment</string>
     <string name="notification">Notificapp</string>
     <string name="first_digit_entry_hint">Enter first number</string>
     <string name="second_digit_entry_hint">Enter second number</string>
@@ -23,4 +20,9 @@
     <string name="user_name">Pawel Wojdera</string>
     <string name="user_mail">paulwojdera@gmail.com</string>
     <string name="valid_number">Please enter valid number</string>
+    <string name="parse_xml">Parse XML File</string>
+    <string name="top_apps_title">Top 10 free apps from Appstore</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/enterNumbers"
-        android:padding="@dimen/activity_horizontal_margin"
+        android:padding="@dimen/small_padding"
         android:text="@string/enter_numbers"
         android:layout_gravity="center"
         android:textAppearance="?android:attr/textAppearanceLarge"/>

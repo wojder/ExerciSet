@@ -128,9 +128,13 @@ public class StartActivity extends AppCompatActivity
                 title = (String) this.getResources().getText(R.string.calculapptor);
                 selectedFragment = ContentFragment.calculator.getFragment();
                 break;
+            case R.id.downloapptor:
+                title = (String) this.getResources().getText(R.string.downloapptor);
+                selectedFragment = ContentFragment.downloader.getFragment();
+                break;
             case R.id.notificapp:
                 title = (String) this.getResources().getText(R.string.notificapp);
-                selectedFragment = ContentFragment.downloader.getFragment();
+                selectedFragment = ContentFragment.notifapptor.getFragment();
                 break;
             default:
                 break;
