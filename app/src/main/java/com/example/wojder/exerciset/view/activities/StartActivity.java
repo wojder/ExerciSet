@@ -1,5 +1,6 @@
 package com.example.wojder.exerciset.view.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -102,7 +103,10 @@ public class StartActivity extends AppCompatActivity
             switchFragment(id);
         } else if (id == R.id.downloapptor) {
             switchFragment(id);
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.youtApp) {
+
+            Intent youtubeIntent = new Intent(this, YoutubeActivity.class);
+            this.startActivity(youtubeIntent);
 
         } else if (id == R.id.nav_share) {
 
