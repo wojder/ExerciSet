@@ -16,14 +16,18 @@ import com.example.wojder.exerciset.model.Application;
 import com.example.wojder.exerciset.utils.DownloadData;
 import com.example.wojder.exerciset.utils.ParseApplication;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 /**
  * A simple {@link Fragment} subclass.
  */
 public class DownloapptorFragment extends Fragment {
 
-    private Button parseButton;
-    private ListView topAppsList;
-    private TextView title;
+    @Bind(R.id.btnParse) Button parseButton;
+    @Bind(R.id.appsListView) ListView topAppsList;
+    @Bind(R.id.topAppsTitle) TextView title;
+
 
     public DownloapptorFragment() {
         // Required empty public constructor
@@ -37,13 +41,11 @@ public class DownloapptorFragment extends Fragment {
 
         final View downloapptorView = inflater.inflate(R.layout.fragment_downloapptor, container, false);
 
+        ButterKnife.bind(this, downloapptorView);
         final DownloadData downloadData = new DownloadData();
         String url = "http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topfreeapplications/limit=10/xml";
         downloadData.execute(url);
 
-        parseButton = (Button) downloapptorView.findViewById(R.id.btnParse);
-        topAppsList = (ListView) downloapptorView.findViewById(R.id.appsListView);
-        title = (TextView) downloapptorView.findViewById(R.id.topAppsTitle);
         title.setText(R.string.top_apps_title);
         title.setVisibility(View.GONE);
 
