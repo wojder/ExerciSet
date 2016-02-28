@@ -16,7 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.wojder.exerciset.R;
-import com.example.wojder.exerciset.utils.ContentFragment;
+import com.example.wojder.exerciset.view.fragments.ContentFragment;
 import com.example.wojder.exerciset.utils.FragmentExchanger;
 
 public class StartActivity extends AppCompatActivity
