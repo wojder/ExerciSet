@@ -32,4 +32,6 @@
     <string name="download_complete">Tap to download!</string>
     <string name="notification_description">Just TAP on notification and Your priceless PDF will be available at device storage.</string>
     <string name="exception_text">There was an exception during downloading PDF</string>
+    <string name="imagapptor_title">ImagApp</string>
+    <string name="imagapp_title">ImagApp</string>
 </resources>

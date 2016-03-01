@@ -13,8 +13,8 @@ public enum ContentFragment {
 
     calculator(new CalculatorFragment()),
     downloader(new DownloapptorFragment()),
-    notifapptor(new NotificapptorFragment());
-
+    notifapptor(new NotificapptorFragment()),
+    imagapp(new ImagApptorFragment());
 
     private Fragment fragment;
 

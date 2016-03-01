@@ -31,7 +31,7 @@ public class NotificapptorFragment extends Fragment {
         Intent notifyIntent = new Intent(getContext(), NotificappService.class);
 
 //        startActivity(notifyIntent);
-        notifyIntent.setDataAndType(Uri.parse("http://commonsware.com/Android/excerpt.pdf"), "application/pdf");
+        notifyIntent.setDataAndType(Uri.parse("https://www.dropbox.com/s/6z4dux5lzs431i2/PawelWojderaResume.pdf?dl=0"), "application/pdf");
 
         getActivity().startService(notifyIntent);
     }

@@ -108,6 +108,8 @@ public class StartActivity extends AppCompatActivity
             Intent youtubeIntent = new Intent(this, YoutubeActivity.class);
             this.startActivity(youtubeIntent);
 
+        } else if (id == R.id.imagapp) {
+            switchFragment(id);
         } else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
@@ -139,6 +141,10 @@ public class StartActivity extends AppCompatActivity
             case R.id.notificapp:
                 title = (String) this.getResources().getText(R.string.notificapp);
                 selectedFragment = ContentFragment.notifapptor.getFragment();
+                break;
+            case R.id.imagapp:
+                title = getResources().getString(R.string.imagapp_title);
+                selectedFragment = ContentFragment.imagapp.getFragment();
                 break;
             default:
                 break;

@@ -42,7 +42,7 @@ public class DownloapptorFragment extends Fragment {
 
         ButterKnife.bind(this, downloapptorView);
         final DownloadData downloadData = new DownloadData();
-        String url = "https://www.dropbox.com/s/6z4dux5lzs431i2/PawelWojderaResume.pdf?dl=0";
+        String url = "http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topfreeapplications/limit=10/xml";
         downloadData.execute(url);
 
         title.setText(R.string.top_apps_title);
