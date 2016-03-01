@@ -29,7 +29,7 @@
     <string name="youtapp">YoutApp</string>
     <string name="notificapp_instruction">Click button to receive special PDF file with propoer notification!</string>
     <string name="notificapp_button_text">Get the priceless PDF</string>
-    <string name="download_complete">Download complete!</string>
-    <string name="notification_description">Your priceless PDF is available at Your device.</string>
+    <string name="download_complete">Tap to download!</string>
+    <string name="notification_description">Just TAP on notification and Your priceless PDF will be available at device storage.</string>
     <string name="exception_text">There was an exception during downloading PDF</string>
 </resources>

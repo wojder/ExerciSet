@@ -13,7 +13,6 @@ import android.support.v4.app.NotificationCompat;
 
 import com.example.wojder.exerciset.R;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -26,16 +25,13 @@ import java.net.URL;
  * Created by wojder on 28.02.16.
  */
 public class NotificappService extends IntentService {
-    private static final int NOTIFY_ID = 1337;
+
+//    private static final String ACTION_COMPLETE = "com.example.wojder.exerciset.action.COMPLETE";
+    private static int NOTIFY_ID = 1337;
     NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
 
-    /**
-     * Creates an IntentService.  Invoked by your subclass's constructor.
-     *
-     * @param name Used to name the worker thread, important only for debugging.
-     */
-    public NotificappService(String name) {
-        super(name);
+    public NotificappService() {
+        super("NotificappService");
     }
 
     @Override
@@ -70,23 +66,23 @@ public class NotificappService extends IntentService {
                 bos.close();
                 connection.disconnect();
             }
+
+            launchNotification(intent, output, null);
         } catch (IOException e) {
             launchNotification(intent, null, e);
         }
     }
 
     private void launchNotification(Intent intent, File output, IOException exception) {
-        NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-
-        makeNotificationExpandable(manager);
 
         builder.setAutoCancel(true).setDefaults(Notification.DEFAULT_ALL);
 
         if (exception == null) {
-            generalNotificationBuild();
+            generalNotificationBuild(getApplicationContext());
 
             Intent outbound = new Intent(Intent.ACTION_VIEW);
             outbound.setDataAndType(Uri.fromFile(output), intent.getType());
+            builder.setContentIntent(PendingIntent.getActivity(this, 0, outbound, 0));
         } else {
             builder.setContentTitle(getString(R.string.exception_text))
                     .setContentText(exception.getMessage())
@@ -94,17 +90,22 @@ public class NotificappService extends IntentService {
                     .setTicker(getString(R.string.exception_text));
         }
 
+        NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+
         manager.notify(NOTIFY_ID, builder.build());
+
+        makeNotificationExpandable(manager);
+
     }
 
-    private NotificationCompat.Builder generalNotificationBuild() {
+    private NotificationCompat.Builder generalNotificationBuild(Context ctx) {
         builder.setAutoCancel(true)
                 .setContentTitle(getString(R.string.download_complete))
                 .setContentText(getString(R.string.notification_description))
                 .setSmallIcon(R.drawable.pdf_icon)
                 .setContentIntent(buildPendingIntent(Settings.ACTION_INTERNAL_STORAGE_SETTINGS))
-                .addAction(android.R.drawable.sym_action_call, "Call me", buildPendingIntent(Intent.ACTION_CALL))
-                .addAction(android.R.drawable.sym_action_chat, "Send Message", buildPendingIntent(Intent.ACTION_SEND));
+                .addAction(android.R.drawable.sym_action_call, "Call me", buildPendingIntent(Intent.ACTION_CALL_BUTTON))
+                .addAction(android.R.drawable.sym_action_chat, "Send Msg", buildPendingIntent(Intent.ACTION_SEND));
 
         return builder;
     }
