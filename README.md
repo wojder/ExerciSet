@@ -1,3 +1,3 @@
 # ExerciSet
 
-Set of exercies after 2nd recommit
+Set of exercies after 3nd recommit
