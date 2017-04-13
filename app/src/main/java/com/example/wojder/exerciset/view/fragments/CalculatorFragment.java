@@ -1,6 +1,7 @@
 package com.example.wojder.exerciset.view.fragments;
 
 
+import android.media.Image;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
@@ -15,24 +16,38 @@ import com.bumptech.glide.Glide;
 import com.example.wojder.exerciset.R;
 import com.rengwuxian.materialedittext.MaterialAutoCompleteTextView;
 
+import org.w3c.dom.Text;
+
+import butterknife.Bind;
+
 /**
  * A simple {@link Fragment} subclass.
  */
 public class CalculatorFragment extends Fragment {
-    private MaterialAutoCompleteTextView firstDigitEntry;
-    private MaterialAutoCompleteTextView secondDigitEntry;
-    private Button buttonAddition;
-    private Button buttonSubstraction;
-    private Button buttonDivision;
-    private Button buttonMultiplication;
-    private Button buttonClear;
-    private ImageView calculatorImg;
-    private TextView result;
+
+    @Bind(R.id.first_digit_entry) MaterialAutoCompleteTextView firstDigitEntry;
+    @Bind(R.id.second_digit_entry) MaterialAutoCompleteTextView secondDigitEntry;
+    @Bind(R.id.button_add) Button buttonAddition;
+    @Bind(R.id.button_subtract) Button buttonSubstraction;
+    @Bind(R.id.button_divide) Button buttonDivision;
+    @Bind(R.id.button_multiply) Button buttonMultiplication;
+    @Bind(R.id.clear_button) Button buttonClear;
+    @Bind(R.id.calc_image) ImageView calculatorImg;
+    @Bind(R.id.result) TextView result;
+
+//    private MaterialAutoCompleteTextView firstDigitEntry;
+//    private MaterialAutoCompleteTextView secondDigitEntry;
+//    private Button buttonAddition;
+//    private Button buttonSubstraction;
+//    private Button buttonDivision;
+//    private Button buttonMultiplication;
+//    private Button buttonClear;
+//    private ImageView calculatorImg;
+//    private TextView result;
 
     public CalculatorFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -67,6 +82,7 @@ public class CalculatorFragment extends Fragment {
 
                     double finalResult = firstOperand + secondOperand;
                     result.setText(Double.toString(finalResult));
+//                    result.setText(String.format("%1$, .2f", finalResult);
                 } else {
                     Snackbar.make(v, R.string.valid_number, Snackbar.LENGTH_LONG).show();
                 }
