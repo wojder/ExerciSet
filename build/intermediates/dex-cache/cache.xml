@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/wojder/Desktop/github/exerciset/app/libs/YouTubeAndroidPlayerApi.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3c4f96ff493456651cc7bdb0b47e10eb25545a16">
+        <dex dex="/home/wojder/Desktop/github/exerciset/app/build/intermediates/transforms/dex/debug/folders/1000/2/YouTubeAndroidPlayerApi_7f888c0a193720e1f5706b13992132fac046135a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/wojder/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/7.0.1/d5d13ea991eab0252e3710e5df3d6a9d4b21d461/butterknife-7.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d5d13ea991eab0252e3710e5df3d6a9d4b21d461">
+        <dex dex="/home/wojder/Desktop/github/exerciset/app/build/intermediates/transforms/dex/debug/folders/1000/10/butterknife-7.0.1_b41e3d47158ceaa97fb2cca40e98152db8e61b09/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/wojder/Desktop/github/exerciset/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/home/wojder/Desktop/github/exerciset/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a743dc955dc304e25528e2a95298b5db4ef78eb5/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/wojder/Desktop/github/exerciset/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7b63f7e902fe0ed8e07280396ed2771a274063e5">
+        <dex dex="/home/wojder/Desktop/github/exerciset/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_0f2405ad8396206fc027ffb1e89d8b0ca093543c/classes.dex" />
+    </item>
+
+</items>
