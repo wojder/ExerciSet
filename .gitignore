@@ -1,5 +1,4 @@
 *.iml
-app/
 gradle.properties
 gradle/
 gradlew
