@@ -1,4 +1,10 @@
 *.iml
+app/
+gradle.properties
+gradle/
+gradlew
+gradlew.bat
+settings.gradle
 .gradle
 /.gradle
 /local.properties
