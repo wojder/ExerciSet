@@ -17,21 +17,31 @@ import com.rengwuxian.materialedittext.MaterialAutoCompleteTextView;
 import java.util.Locale;
 
 import butterknife.Bind;
+import butterknife.ButterKnife;
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class CalculatorFragment extends Fragment {
 
-    @Bind(R.id.first_digit_entry) MaterialAutoCompleteTextView firstDigitEntry;
-    @Bind(R.id.second_digit_entry) MaterialAutoCompleteTextView secondDigitEntry;
-    @Bind(R.id.button_add) Button buttonAddition;
-    @Bind(R.id.button_subtract) Button buttonSubstraction;
-    @Bind(R.id.button_divide) Button buttonDivision;
-    @Bind(R.id.button_multiply) Button buttonMultiplication;
-    @Bind(R.id.clear_button) Button buttonClear;
-    @Bind(R.id.calc_image) ImageView calculatorImg;
-    @Bind(R.id.result) TextView result;
+    @Bind(R.id.first_digit_entry)
+    MaterialAutoCompleteTextView firstDigitEntry;
+    @Bind(R.id.second_digit_entry)
+    MaterialAutoCompleteTextView secondDigitEntry;
+    @Bind(R.id.button_add)
+    Button buttonAddition;
+    @Bind(R.id.button_subtract)
+    Button buttonSubstraction;
+    @Bind(R.id.button_divide)
+    Button buttonDivision;
+    @Bind(R.id.button_multiply)
+    Button buttonMultiplication;
+    @Bind(R.id.clear_button)
+    Button buttonClear;
+    @Bind(R.id.calc_image)
+    ImageView calculatorImg;
+    @Bind(R.id.result)
+    TextView result;
 
     public CalculatorFragment() {
         // Required empty public constructor
@@ -41,6 +51,7 @@ public class CalculatorFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View calculatorView = inflater.inflate(R.layout.fragment_calculator, container, false);
+        ButterKnife.bind(this, calculatorView);
 
         String internetImageSource = "http://icons.iconarchive.com/icons/martz90/circle/512/calculator-icon.png";
 
