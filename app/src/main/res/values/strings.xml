@@ -34,4 +34,5 @@
     <string name="exception_text">There was an exception during downloading PDF</string>
     <string name="imagapptor_title">ImagApp</string>
     <string name="imagapp_title">ImagApp</string>
+    <string name="flickrThumb">flickrThumb</string>
 </resources>

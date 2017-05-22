@@ -28,7 +28,6 @@ public class DownloapptorFragment extends Fragment {
     @Bind(R.id.appsListView) ListView topAppsList;
     @Bind(R.id.topAppsTitle) TextView title;
 
-
     public DownloapptorFragment() {
     }
 
@@ -43,6 +42,7 @@ public class DownloapptorFragment extends Fragment {
         ButterKnife.bind(this, downloapptorView);
         final DownloadData downloadData = new DownloadData();
         String url = "http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/topfreeapplications/limit=10/xml";
+//        String url = "https://api.flickr.com/services/feeds/photos_public.gne?tags";
         downloadData.execute(url);
 
         title.setText(R.string.top_apps_title);
