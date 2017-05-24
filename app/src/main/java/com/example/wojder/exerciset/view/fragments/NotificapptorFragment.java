@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.example.wojder.exerciset.R;
 import com.example.wojder.exerciset.utils.NotificappService;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -23,11 +23,13 @@ import butterknife.OnClick;
  */
 public class NotificapptorFragment extends Fragment {
 
-    @Bind(R.id.btn_notify_me) Button buttonNotifyMe;
-    @Bind(R.id.notificapp_instruction) TextView tvNotificapp;
+    @BindView(R.id.btn_notify_me)
+    Button buttonNotifyMe;
+    @BindView(R.id.notificapp_instruction)
+    TextView tvNotificapp;
 
     @OnClick(R.id.btn_notify_me)
-    public void notifyMe(){
+    public void notifyMe() {
         Intent notifyIntent = new Intent(getContext(), NotificappService.class);
 
 //        startActivity(notifyIntent);

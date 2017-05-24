@@ -16,7 +16,7 @@ import com.rengwuxian.materialedittext.MaterialAutoCompleteTextView;
 
 import java.util.Locale;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -24,23 +24,23 @@ import butterknife.ButterKnife;
  */
 public class CalculatorFragment extends Fragment {
 
-    @Bind(R.id.first_digit_entry)
+    @BindView(R.id.first_digit_entry)
     MaterialAutoCompleteTextView firstDigitEntry;
-    @Bind(R.id.second_digit_entry)
+    @BindView(R.id.second_digit_entry)
     MaterialAutoCompleteTextView secondDigitEntry;
-    @Bind(R.id.button_add)
+    @BindView(R.id.button_add)
     Button buttonAddition;
-    @Bind(R.id.button_subtract)
+    @BindView(R.id.button_subtract)
     Button buttonSubstraction;
-    @Bind(R.id.button_divide)
+    @BindView(R.id.button_divide)
     Button buttonDivision;
-    @Bind(R.id.button_multiply)
+    @BindView(R.id.button_multiply)
     Button buttonMultiplication;
-    @Bind(R.id.clear_button)
+    @BindView(R.id.clear_button)
     Button buttonClear;
-    @Bind(R.id.calc_image)
+    @BindView(R.id.calc_image)
     ImageView calculatorImg;
-    @Bind(R.id.result)
+    @BindView(R.id.result)
     TextView result;
 
     public CalculatorFragment() {
@@ -56,7 +56,7 @@ public class CalculatorFragment extends Fragment {
         String internetImageSource = "http://icons.iconarchive.com/icons/martz90/circle/512/calculator-icon.png";
 
         Glide
-                .with(calculatorImg.getContext())
+                .with(getContext())
                 .load(internetImageSource)
                 .centerCrop()
                 .into(calculatorImg);

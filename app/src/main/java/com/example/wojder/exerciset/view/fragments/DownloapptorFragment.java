@@ -16,7 +16,7 @@ import com.example.wojder.exerciset.model.Application;
 import com.example.wojder.exerciset.utils.DownloadData;
 import com.example.wojder.exerciset.utils.ParseApplication;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -24,9 +24,12 @@ import butterknife.ButterKnife;
  */
 public class DownloapptorFragment extends Fragment {
 
-    @Bind(R.id.btnParse) Button parseButton;
-    @Bind(R.id.appsListView) ListView topAppsList;
-    @Bind(R.id.topAppsTitle) TextView title;
+    @BindView(R.id.btnParse)
+    Button parseButton;
+    @BindView(R.id.appsListView)
+    ListView topAppsList;
+    @BindView(R.id.topAppsTitle)
+    TextView title;
 
     public DownloapptorFragment() {
     }

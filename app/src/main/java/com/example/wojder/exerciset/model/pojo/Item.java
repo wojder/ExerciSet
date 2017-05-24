@@ -37,6 +37,14 @@ public class Item {
     @Expose
     private String tags;
 
+    public Item(String title, String link, String description, String author, String tags) {
+        this.title = title;
+        this.link = link;
+        this.description = description;
+        this.author = author;
+        this.tags = tags;
+    }
+
     public String getTitle() {
         return title;
     }

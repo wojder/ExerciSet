@@ -4,14 +4,16 @@
     android:layout_height="match_parent"
     tools:context="com.example.wojder.exerciset.view.fragments.ImagApptorFragment">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@string/flickrThumb"/>
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="@string/hello_blank_fragment" />
+
+    <view
+        android:id="@+id/recycler_view"
+        class="android.support.v7.widget.RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="16dp" />
 
 </FrameLayout>

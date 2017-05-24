@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.example.wojder.exerciset.R;
 import com.example.wojder.exerciset.utils.ParseApplication;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -61,11 +61,11 @@ public class DownloapptorAdapter extends BaseAdapter {
     }
 
     static class ViewHolder {
-        @Bind(R.id.btnParse)
+        @BindView(R.id.btnParse)
         Button parseButton;
-        @Bind(R.id.appsListView)
+        @BindView(R.id.appsListView)
         ListView topAppsList;
-        @Bind(R.id.topAppsTitle)
+        @BindView(R.id.topAppsTitle)
         TextView title;
 
         ViewHolder(View convertView) {
